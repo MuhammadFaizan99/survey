@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="surveyContainer">
+    <div id="titleContainer">
+      <p><strong>Want a New Roof & <span style="text-decoration: underline;">$500 CASH</span>?</strong> Your home may
+        qualify for our showcase program. Take this Free 30-second Roofing Quiz!</p>
+    </div>
+    <div id="subtitleContainer">
+      <p>Enter your information below to see if you qualify:</p>
+    </div>
+
+    <div id="innerContainer">
+
+      <div id="innerContainer">
+        <!-- Question 1 -->
+        <div id="question1" class="question">
+          <p><strong>Are you the home owner?</strong></p>
+          <input type="radio" id="ownerYes" name="homeOwner" value="Yes">
+          <label for="ownerYes"><strong>Yes</strong></label><br>
+          <input type="radio" id="ownerNo" name="homeOwner" value="No">
+          <label for="ownerNo"><strong>No</strong></label><br>
+          <span id="error1" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(2)">Next</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="question2" class="question" style="display: none;">
+          <p><strong>Roughly how many square feet is your home?</strong></p>
+          <input type="radio" id="size1" name="homeSize" value="Under 1,500">
+          <label for="size1"><strong>Under 1,500</strong></label><br>
+          <input type="radio" id="size2" name="homeSize" value="1,500 to 2,500">
+          <label for="size2"><strong>1,500 to 2,500</strong></label><br>
+          <input type="radio" id="size3" name="homeSize" value="2,500 to 3,500">
+          <label for="size3"><strong>2,500 to 3,500</strong></label><br>
+          <input type="radio" id="size4" name="homeSize" value="3,500+">
+          <label for="size4"><strong>3,500+</strong></label><br>
+          <span id="error2" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(3)">Next</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="question3" class="question" style="display: none;">
+          <p><strong>What is the Scope of This Project?</strong></p>
+          <input type="radio" id="scopeReplace" name="scopeOfProject" value="Replace Complete Roof">
+          <label for="scopeReplace"><strong>Replace Complete Roof</strong></label><br>
+          <input type="radio" id="scopeNew" name="scopeOfProject" value="New Construction">
+          <label for="scopeNew"><strong>New Construction</strong></label><br>
+          <input type="radio" id="scopeRepair" name="scopeOfProject" value="Repair Existing">
+          <label for="scopeRepair"><strong>Repair Existing</strong></label><br>
+          <span id="error3" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(4)">Next</button>
+        </div>
+
+        <!-- Question 4 -->
+        <div id="question4" class="question" style="display: none;">
+          <p><strong>When would you like your new roof to be installed?</strong></p>
+          <input type="radio" id="installationASAP" name="roofInstallation" value="As soon as possible">
+          <label for="installationASAP"><strong>As soon as possible</strong></label><br>
+          <input type="radio" id="installation30Days" name="roofInstallation" value="In the next 30 days">
+          <label for="installation30Days"><strong>In the next 30 days</strong></label><br>
+          <input type="radio" id="installationMoreThan30Days" name="roofInstallation"
+            value="More than a month from now">
+          <label for="installationMoreThan30Days"><strong>More than a month from now</strong></label><br>
+          <span id="error4" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(5)">Next</button>
+        </div>
+
+        <div id="question5" class="question" style="display: none;">
+          <p><strong>What is your address?</strong></p>
+          <input type="text" id="address" name="address" placeholder="Enter Address" required>
+          <span id="error5" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(6)">Next</button>
+        </div>
+      
+        <!-- Question 6 -->
+        <div id="question6" class="question" style="display: none;">
+          <p><strong>First Name *</strong></p>
+          <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+          <p><strong>Last Name *</strong></p>
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+          <span id="error6" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(7)">Next</button>
+        </div>
+      
+        <!-- Question 7 -->
+        <div id="question7" class="question" style="display: none;">
+          <p><strong>What is your email address?</strong></p>
+          <input type="email" id="email" name="email" placeholder="Enter Email" required>
+          <span id="error7" class="error-message" style="color: red;"></span>
+          <button onclick="goToQuestion(8)">Next</button>
+        </div>
+      
+        <!-- Question 8 -->
+        <div id="question8" class="question" style="display: none;">
+          <p><strong>What is your phone number?</strong></p>
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+          <span id="error8" class="error-message" style="color: red;"></span>
+          <button onclick="submitSurvey()">Submit</button>
+        </div>
+
+      <!-- Progress Bar -->
+      <div id="progressBar">
+        <div id="progress"><span id="progressText">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

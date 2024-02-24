@@ -1,0 +1,175 @@
+#surveyContainer {
+  width: 36%;
+  /* Sets the width of the outer container to 50% of its parent element, typically the <body> element. */
+  margin: 20px auto;
+  /* Centers the container horizontally within its parent and adds 20px margin on top and bottom. 'auto' automatically adjusts left and right margins to center the element. */
+  border: 2px solid #e10000;
+  /* Adds a 2px thick solid black border around the outer container. */
+  background-color: rgba(0, 0, 139, 0.8);
+  /* The '0.8' is the opacity level */
+  padding: 60px;
+  /* Adds 20px padding inside the outer container, creating space between the container's border and its contents. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Adds a subtle shadow around the outer container for a 3D effect. The shadow is light and spreads 10 pixels. */
+  text-align: center;
+  border-radius: 5px;
+
+}
+input:focus {
+  outline: none !important;
+}
+
+#titleContainer {
+  /* ... your existing styles ... */
+  color: #FFFFFF;
+  /* Sets the text color to white */
+  font-family: 'Comfortaa', sans-serif;
+  /* Example of setting a font-family. You can choose any font that suits your design */
+  font-size: 26px;
+  /* Sets the base font size. Adjust as needed */
+  margin: -35px;
+  margin-bottom: 10px;
+  /* Reduced bottom margin to move the title up */
+}
+
+#subtitleContainer {
+  color: #FFFFFF;
+  /* Sets the text color to white */
+  font-family: 'Comfortaa', sans-serif;
+  /* Example of setting a font-family. You can choose any font that suits your design */
+  font-size: 14px;
+  /* Sets the base font size. Adjust as needed */
+
+}
+
+
+#innerContainer {
+  background-color: #FFF;
+  /* Sets the background color of the inner container to white. */
+  padding: 6px;
+  /* Adds 20px padding inside the inner container, creating space between the container's border and its contents. */
+  text-align: left;
+  width: 90%;
+  margin: auto;
+}
+
+#innerContainer button {
+  width: 100%;
+  /* Makes the button fill the entire width of the innerContainer */
+  height: 50px;
+  /* Sets a fixed height for the button */
+  background-color: #e10000;
+  /* Sets the button's background color */
+  color: white;
+  /* Sets the button text color to white for better contrast */
+  border: none;
+  /* Removes the default border */
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the button */
+  font-size: 16px;
+  /* Adjusts the font size */
+  border-radius: 5px;
+  /* Optionally adds rounded corners to the button */
+  padding: 10px 0;
+  /* Adds padding to the top and bottom, keeping the button text vertically centered */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Optionally adds a subtle shadow for depth */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+  margin-top: 20px;
+  /* Increase the top margin to push the button down */
+}
+
+#innerContainer button:hover {
+  background-color: #e10000;
+  /* Slightly darker shade on hover for a visual feedback */
+}
+
+
+.question {
+  margin-bottom: 15px;
+  /* Adds 20px of space below each question for better separation and readability. */
+  opacity: 0;
+  /* Start with questions invisible */
+  visibility: hidden;
+  /* Hide questions initially */
+  transition: opacity 0.5s, visibility 0s linear 0.5s;
+  /* Transition effect for opacity and delay hiding */
+}
+
+.question.show {
+  opacity: 1;
+  /* Fully visible when active */
+  visibility: visible;
+  /* Make question visible */
+  transition: opacity 0.5s;
+  /* Transition effect for opacity */
+}
+
+
+#progressBar {
+  width: 100%;
+  /* Sets the progress bar's width to fill 100% of its parent container's width, ensuring it spans the entire width of the survey container. */
+  background-color: #ddd;
+  /* Sets the background color of the progress bar to a light grey, visually differentiating it from the progress indicator. */
+  margin-top: 15px;
+  /* Adds 20px of space above the progress bar, separating it from the content above it. */
+  border-radius: 25px;
+  /* Rounds the corners of the progress bar with a 25px radius, giving it a pill-like shape for a more modern look. */
+}
+
+#progress {
+  width: 0%;
+  /* Initially sets the progress indicator's width to 0%, meaning no progress. This value is expected to change dynamically with JavaScript as the user progresses through the survey. */
+  height: 20px;
+  /* Sets a fixed height of 30px for the progress indicator, ensuring it's visibly thick enough. */
+  background-color: #e10000;
+  /* Sets the progress indicator's color to a shade of green, making it stand out against the grey background of the progress bar. */
+  text-align: center;
+  /* Centers the text inside the progress indicator, if any (e.g., percentage completed). */
+  line-height: 20px;
+  /* Sets the line height equal to the height of the progress indicator, vertically centering the text within it. */
+  color: white;
+  /* Sets the color of the text within the progress indicator to white, ensuring it's readable against the green background. */
+  border-radius: 25px;
+  /* Rounds the corners of the progress bar with a 25px radius, giving it a pill-like shape for a more modern look. */
+  transition: width 0.5s ease;
+  /* Smooth transition for width changes */
+}
+
+#innerContainer input[type="text"],
+#innerContainer input[type="email"],
+#innerContainer input[type="tel"] {
+  width: 100%;
+  /* Makes the input field take up the full width of its container */
+  padding: 10px;
+  /* Adds some padding inside the input fields for better text visibility and easier interaction */
+  margin: 5px 0 20px;
+  /* Adds some margin around the input fields for spacing */
+  border: none;
+  /* Adds a subtle border to the input fields */
+  border-radius: 3px;
+  /* Rounds the corners of the input fields for a smoother look */
+  box-sizing: border-box;
+  /* Ensures the padding and border are included in the total width and height */
+  font-size: 13px;
+  /* Increases the font size for better readability */
+  background-color: #dcdcdc;
+  /* Sets a light background color for the input fields */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* Adds a subtle inner shadow to add depth */
+  font-size: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  /* Smooth transitions for focus effects */
+}
+
+#innerContainer input[type="text"]:focus,
+#innerContainer input[type="email"]:focus,
+#innerContainer input[type="tel"]:focus {
+  border-color: #e10000;
+  /* Changes the border color to highlight the focused input field */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 0, 0);
+  /* Enhances the shadow effect on focus for better visibility */
+  outline: none;
+  /* Removes the default focus outline to rely on the border and shadow changes */
+}
