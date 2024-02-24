@@ -110,7 +110,7 @@ function submitSurvey() {
   };
 
   // Send the survey data to the server using fetch or another method
-  fetch("https://survey-server-lilac.vercel.app/", {
+  fetch("https://survey-server-lilac.vercel.app/mail-survey-form", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
