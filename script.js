@@ -90,12 +90,6 @@ function submitSurvey() {
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
 
-  // Check if required fields are empty
-  if (!address || !firstName || !lastName || !email || !phone) {
-    alert("Please fill in all required fields before proceeding.");
-    return;
-  }
-
   // Create a JavaScript object with the survey form data
   var surveyData = {
     homeOwner: homeOwner,
@@ -119,12 +113,17 @@ function submitSurvey() {
   })
     .then((response) => response.json())
     .then((data) => {
-      // Handle the response from the server (e.g., show a success message)
-      alert(data.message);
+      // Display the thank you message
+      var thankYouMessage = document.getElementById("thankYouMessage");
+      thankYouMessage.style.display = "block";
     })
     .catch((error) => {
       console.error("Error submitting survey:", error);
     });
+
+  // Hide the survey container
+  var surveyContainer = document.getElementById("surveyContainer");
+  surveyContainer.style.display = "none";
 
   // Update the progress bar
   updateProgress(100);
@@ -145,4 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     firstQuestion.classList.add("show");
   }, 10);
+
+  // Add a new element for the thank you message with styling
+  var thankYouMessage = document.createElement("div");
+  thankYouMessage.id = "thankYouMessage";
+  thankYouMessage.innerHTML = "<p style='font-size: 35px; font-weight: bold;margin-top:100px;text-align: center;'>Thank you for your submission!</p>";
+  thankYouMessage.style.display = "none";
+  document.body.appendChild(thankYouMessage);
 });

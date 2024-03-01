@@ -31,6 +31,9 @@ input:focus {
   margin-bottom: 10px;
   /* Reduced bottom margin to move the title up */
 }
+#thankYouMessage{
+  font-family: 'Comfortaa', sans-serif;
+}
 
 #subtitleContainer {
   color: #FFFFFF;
