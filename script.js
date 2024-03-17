@@ -113,6 +113,10 @@ function submitSurvey() {
   })
     .then((response) => response.json())
     .then((data) => {
+      // Display the thank you container
+      var thankYouContainer = document.getElementById("thankYouContainer");
+      thankYouContainer.style.display = "flex";
+
       // Display the thank you message
       var thankYouMessage = document.getElementById("thankYouMessage");
       thankYouMessage.style.display = "block";
@@ -122,7 +126,7 @@ function submitSurvey() {
     });
 
   // Hide the survey container
-  var surveyContainer = document.getElementById("surveyContainer");
+  var surveyContainer = document.getElementById("main-surveyContainer");
   surveyContainer.style.display = "none";
 
   // Update the progress bar
@@ -145,10 +149,26 @@ document.addEventListener("DOMContentLoaded", function () {
     firstQuestion.classList.add("show");
   }, 10);
 
-  // Add a new element for the thank you message with styling
+  // Add a new element for the thank you container
+  var thankYouContainer = document.createElement("div");
+  thankYouContainer.id = "thankYouContainer";
+  thankYouContainer.style.display = "none";
+  thankYouContainer.style.justifyContent = "center";
+  thankYouContainer.style.alignItems = "center";
+  thankYouContainer.style.position = "absolute";
+  thankYouContainer.style.top = "0";
+  thankYouContainer.style.left = "0";
+  thankYouContainer.style.width = "100%";
+  thankYouContainer.style.height = "100%";
+  thankYouContainer.style.backgroundImage = "url('./new-housing-estate-from-above.png')";
+  thankYouContainer.style.backgroundSize = "cover";
+  thankYouContainer.style.backgroundPosition = "center";
+  document.body.appendChild(thankYouContainer);
+
+  // Add a new element for the thank you message inside the thank you container
   var thankYouMessage = document.createElement("div");
   thankYouMessage.id = "thankYouMessage";
-  thankYouMessage.innerHTML = "<p style='font-size: 35px; font-weight: bold;margin-top:100px;text-align: center;'>Thank you for your submission!</p>";
+  thankYouMessage.innerHTML = "<p style='font-size: 35px; border: 2px solid red; padding: 35px; font-weight: bold; text-align: center;'>Thank you for your submission!</p>";
   thankYouMessage.style.display = "none";
-  document.body.appendChild(thankYouMessage);
+  thankYouContainer.appendChild(thankYouMessage);
 });

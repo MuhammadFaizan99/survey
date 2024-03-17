@@ -1,19 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main-surveyContainer{
+  background-image: url('./new-housing-estate-from-above.png'); 
+  background-size: cover;
+  background-position: center; 
+  height: 100vh;
+  padding: 70px 0px;
+}
 #surveyContainer {
   width: 36%;
-  /* Sets the width of the outer container to 50% of its parent element, typically the <body> element. */
-  margin: 20px auto;
-  /* Centers the container horizontally within its parent and adds 20px margin on top and bottom. 'auto' automatically adjusts left and right margins to center the element. */
+  margin: 0px auto;
   border: 2px solid #e10000;
-  /* Adds a 2px thick solid black border around the outer container. */
   background-color: rgba(0, 0, 139, 0.8);
-  /* The '0.8' is the opacity level */
   padding: 60px;
-  /* Adds 20px padding inside the outer container, creating space between the container's border and its contents. */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Adds a subtle shadow around the outer container for a 3D effect. The shadow is light and spreads 10 pixels. */
   text-align: center;
   border-radius: 5px;
-
 }
 input:focus {
   outline: none !important;
@@ -31,8 +36,17 @@ input:focus {
   margin-bottom: 10px;
   /* Reduced bottom margin to move the title up */
 }
-#thankYouMessage{
+#thankYouMessage {
   font-family: 'Comfortaa', sans-serif;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #fff;
 }
 
 #subtitleContainer {
