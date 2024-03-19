@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ input:focus {
   /* ... your existing styles ... */
   color: #FFFFFF;
   /* Sets the text color to white */
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Open Sans", sans-serif;
   /* Example of setting a font-family. You can choose any font that suits your design */
   font-size: 26px;
   /* Sets the base font size. Adjust as needed */
@@ -37,7 +38,7 @@ input:focus {
   /* Reduced bottom margin to move the title up */
 }
 #thankYouMessage {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
@@ -52,7 +53,7 @@ input:focus {
 #subtitleContainer {
   color: #FFFFFF;
   /* Sets the text color to white */
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Open Sans", sans-serif;
   /* Example of setting a font-family. You can choose any font that suits your design */
   font-size: 14px;
   /* Sets the base font size. Adjust as needed */

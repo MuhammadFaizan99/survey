@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add a new element for the thank you message inside the thank you container
   var thankYouMessage = document.createElement("div");
   thankYouMessage.id = "thankYouMessage";
-  thankYouMessage.innerHTML = "<p style='font-size: 35px; border: 2px solid red; padding: 35px; font-weight: bold; text-align: center;'>Thank you for your submission!</p>";
+  thankYouMessage.innerHTML = "<p style='font-size: 35px; border: 2px solid red; padding: 35px; font-weight: bold; background-color:#ececec;text-align: center;'>Thank you for your submission!</p>";
   thankYouMessage.style.display = "none";
   thankYouContainer.appendChild(thankYouMessage);
 });
