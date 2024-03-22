@@ -125,6 +125,7 @@ input:focus {
 }
 .question p,.question label{
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 
