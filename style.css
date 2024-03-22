@@ -123,6 +123,9 @@ input:focus {
   transition: opacity 0.5s;
   /* Transition effect for opacity */
 }
+.question p,.question label{
+  font-family: "Open Sans", sans-serif;
+}
 
 
 #progressBar {
