@@ -37,7 +37,7 @@ function goToQuestion(nextQuestionNumber) {
     for (var i = 0; i < inputFields.length; i++) {
       if (!inputFields[i].value.trim()) {
         fieldEmpty = true;
-        // inputFields[i].style.border = "1px solid red"; 
+        inputFields[i].style.border = "1px solid red"; // Apply red border for empty fields
       } else {
         inputFields[i].style.border = ""; // Clear red border for filled fields
       }
@@ -89,6 +89,13 @@ function submitSurvey() {
   var lastName = document.getElementById("lastName").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
+
+  // Validate phone number
+  if (!phone.trim()) {
+    var errorMessage = document.getElementById("error8");
+    errorMessage.textContent = "Please fill in this field.";
+    return; // Prevent form submission
+  }
 
   // Create a JavaScript object with the survey form data
   var surveyData = {
